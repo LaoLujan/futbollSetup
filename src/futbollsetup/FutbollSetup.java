@@ -42,7 +42,11 @@ public class FutbollSetup {
        while ((line = br.readLine()) !=null){
        String[] playerData = line.split(",");
        System.out.println(playerData[0]);
-    }
+       
+       if (playerData[4].equals("Foward")){
+           Forward player = new Forward(0, playerData[0], playerData[1], playerData[2], Integer.parseInt(playerData[3]), playerData[4]);
+       }
+    }   
        
     }
 }
